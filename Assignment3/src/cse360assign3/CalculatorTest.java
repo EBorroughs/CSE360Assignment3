@@ -58,6 +58,10 @@ public class CalculatorTest {
 	@Test
 	public void getHistory() {
 		Calculator calculator = new Calculator();
-		assertEquals(calculator.getHistory(), "");
+		calculator.add(6);
+		calculator.subtract(2);
+		calculator.multiply(3);
+		calculator.divide(12);
+		assertEquals(calculator.getHistory(), "0 + 6 - 2 * 3 / 12");
 	}
 }
